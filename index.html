@@ -250,9 +250,10 @@
                 <textarea class="form-control" name="message" id="message" rows="1"
                   placeholder="Enter Message"></textarea>
               </div>
+              <!-- <span class="alert alert-danger" id="alertBox" style="width: 100%;"></span> -->
             </div>
             <div class="col-md-12 text-right">
-              <button type="button" onclick="" value="submit" class="primary_btn">
+              <button type="button" onclick="sendMail();" value="submit" class="primary_btn">
                 <span>Send Message</span>
               </button>
             </div>
@@ -280,6 +281,15 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
   <script src="js/gmaps.min.js"></script>
   <script src="js/theme.js"></script>
+  <script>
+    function sendMail() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var body = document.getElementById('message').value;
+      window.open('mailto:Nidhin P P (nedhinpp@gmail.com)?subject=' + subject + '&body=' + body);
+    }
+  </script>
 </body>
 
 </html>
